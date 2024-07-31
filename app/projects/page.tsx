@@ -1,5 +1,39 @@
+import type { Metadata } from "next";
+import PageTransition from "utils/page-transition";
+import ProjectCard from "app/projects/project-card";
+import { projects } from "app/projects/projects";
+import { Flex, Heading, Grid, GridItem } from "@chakra-ui/react";
+
+export const metadata: Metadata = {
+  title: "Danial Khakbaz | Projects",
+  description: "here's where all my projects are.",
+};
+
 const ProjectsPage = async () => {
-  return <></>;
+  return (
+    <PageTransition>
+      <Flex flexDirection="column" gap={6}>
+        <Heading>Projects</Heading>
+        <Grid
+          minHeight={{ base: "1800px", md: "900px" }}
+          templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }}
+          gap={{ base: 2, md: 6 }}
+        >
+          {projects.map((project) => (
+            <GridItem key={project.link}>
+              <ProjectCard
+                link={project.link}
+                imageSrc={project.images[0].src}
+                alt={project.images[0].alt}
+                title={project.title}
+                description={project.description}
+              />
+            </GridItem>
+          ))}
+        </Grid>
+      </Flex>
+    </PageTransition>
+  );
 };
 
 export default ProjectsPage;
