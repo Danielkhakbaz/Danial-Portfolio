@@ -1,0 +1,52 @@
+{
+  "name": "danial-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "author": "Danial Khakbaz<danialkhakbaz.dk@gmail.com>",
+  "description": "Danial Khakbaz's Portfolio built with next.js",
+  "keywords": [
+    "portfolio",
+    "danial khakbaz",
+    "danial",
+    "khakbaz",
+    "Front-end Developer",
+    "Web Developer",
+    "Software Developer"
+  ],
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint --fix",
+    "fix": "prettier --write .",
+    "check-prettier": "prettier . --check",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "babel-plugin-react-compiler": "^0.0.0-experimental-334f00b-20240725",
+    "next": "^15.0.0-rc.0",
+    "react": "^19.0.0-rc-3208e73e-20240730",
+    "react-dom": "^19.0.0-rc-3208e73e-20240730"
+  },
+  "devDependencies": {
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.13.0",
+    "@emotion/styled": "^11.13.0",
+    "@eslint/js": "^9.8.0",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "9.x",
+    "eslint-config-next": "^14.2.5",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.35.0",
+    "framer-motion": "^11.3.19",
+    "globals": "^15.8.0",
+    "husky": "^8.0.0",
+    "prettier": "^3.3.3",
+    "react-icons": "^5.2.1",
+    "sharp": "^0.33.4",
+    "typescript": "^5",
+    "typescript-eslint": "^7.18.0"
+  }
+}
