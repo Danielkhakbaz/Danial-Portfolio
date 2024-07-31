@@ -1,3 +1,4 @@
+import PageTransition from "utils/page-transition";
 import ImagesGrid from "app/@components/images-grid";
 import FavQuote from "app/@components/fav-quote";
 import Summary from "app/@components/summary";
@@ -10,16 +11,18 @@ import { Flex } from "@chakra-ui/react";
 
 const HomePage = async () => {
   return (
-    <Flex flexDirection="column" gap={6}>
-      <ImagesGrid />
-      <FavQuote />
-      <Summary />
-      <About />
-      <Bio />
-      <Interests />
-      <Links />
-      <Education />
-    </Flex>
+    <PageTransition>
+      <Flex flexDirection="column" gap={6}>
+        <ImagesGrid />
+        <FavQuote />
+        <Summary />
+        <About />
+        <Bio />
+        <Interests />
+        <Links />
+        <Education />
+      </Flex>
+    </PageTransition>
   );
 };
 

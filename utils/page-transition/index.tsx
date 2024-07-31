@@ -4,6 +4,10 @@ import { ReactNode } from "react";
 import dynamic from "next/dynamic";
 import { useMediaQuery } from "@chakra-ui/react";
 
+const MotionComponent = dynamic(() => import("utils/motion"), {
+  ssr: false,
+});
+
 type PageTransitionProps = {
   children: ReactNode;
 };
@@ -12,10 +16,6 @@ const PageTransition = ({ children }: PageTransitionProps) => {
   const [isLargerThan768] = useMediaQuery("(min-width: 768px)");
 
   if (isLargerThan768) {
-    const MotionComponent = dynamic(() => import("utils/motion"), {
-      ssr: false,
-    });
-
     return (
       <MotionComponent
         tag="div"
