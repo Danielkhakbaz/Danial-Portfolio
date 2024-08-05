@@ -11,7 +11,7 @@ import {
 } from "react-icons/si";
 import { Flex } from "@chakra-ui/react";
 
-const Skills = async () => {
+export const Skills = async () => {
   return (
     <Flex
       width="100%"

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import PageTransition from "utils/page-transition";
+import PageTransition from "lib/utils/page-transition";
 import { Flex, Heading, Button } from "@chakra-ui/react";
 import { FaHome } from "react-icons/fa";
 

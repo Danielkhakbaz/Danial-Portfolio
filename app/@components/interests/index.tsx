@@ -1,4 +1,4 @@
-import HomePageSectionMaker from "components/homepage-section-maker";
+import HomePageSectionMaker from "components/ui/homepage-section-maker";
 import { Flex, Tooltip, Text, Badge } from "@chakra-ui/react";
 
 const Interests = async () => {

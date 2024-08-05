@@ -1,6 +1,6 @@
 import NextLink from "next/link";
-import Logo from "layout/navbar/logo";
-import { WebMenu, MobileMenu } from "layout/navbar/menu";
+import Logo from "components/layout/navbar/logo";
+import { WebMenu, MobileMenu } from "components/layout/navbar/menu";
 import { Container, Flex, Link } from "@chakra-ui/react";
 
 const Navbar = async () => {

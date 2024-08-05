@@ -1,9 +1,9 @@
 import { ReactNode } from "react";
 import type { Metadata } from "next";
-import Navbar from "layout/navbar";
-import Footer from "layout/footer";
-import ScrollToTop from "utils/scroll-to-top";
-import { ChakraProvider } from "providers/chakra";
+import Navbar from "components/layout/navbar";
+import Footer from "components/layout/footer";
+import ScrollToTop from "lib/utils/scroll-to-top";
+import { ChakraProvider } from "lib/providers/chakra";
 import { LatoFont } from "styles/font";
 import { Container } from "@chakra-ui/react";
 

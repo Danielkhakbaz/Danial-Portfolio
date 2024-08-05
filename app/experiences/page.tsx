@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import PageTransition from "utils/page-transition";
+import PageTransition from "lib/utils/page-transition";
 import Skills from "app/experiences/skills";
 import Experiences from "app/experiences/experiences";
 import { Flex, Heading, Divider } from "@chakra-ui/react";

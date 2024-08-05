@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { quotes } from "app/@components/fav-quote/quotes";
+import { quotes } from "lib/constants";
 import { Center, Flex, Text } from "@chakra-ui/react";
 
 const FavQuote = () => {
@@ -18,7 +18,7 @@ const FavQuote = () => {
       color="white"
       display="inline-flex"
       justifyContent="space-between"
-      borderRadius={10}
+      borderRadius={20}
       padding={5}
     >
       <Flex width="100%" justifyContent="center">

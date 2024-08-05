@@ -1,12 +1,16 @@
 import NextLink from "next/link";
-import HomePageSectionMaker from "components/homepage-section-maker";
-import { socials } from "app/@components/links/socials";
+import HomePageSectionMaker from "components/ui/homepage-section-maker";
+import { socials } from "lib/constants";
 import { Flex, Link } from "@chakra-ui/react";
 
 const Links = async () => {
   return (
     <HomePageSectionMaker label="Links">
-      <Flex justifyContent="space-between" flexWrap="wrap" gap={4}>
+      <Flex
+        justifyContent="space-between"
+        flexWrap="wrap"
+        gap={{ base: 12, md: 2 }}
+      >
         {socials.map((social) => (
           <Link
             as={NextLink}

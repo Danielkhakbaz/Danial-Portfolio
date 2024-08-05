@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import Image from "next/image";
-import HomePageSectionMaker from "components/homepage-section-maker";
-import { educationalHistory } from "app/@components/education/educational-history";
+import HomePageSectionMaker from "components/ui/homepage-section-maker";
+import { educationalHistory } from "lib/constants";
 import { Flex, Text, Heading, Divider } from "@chakra-ui/react";
 
 const Education = async () => {
@@ -14,20 +14,20 @@ const Education = async () => {
               flexDirection={{ base: "column", md: "row" }}
               gap={{ base: 2, md: 6 }}
             >
-              <Flex>
-                <Image
-                  width={70}
-                  height={70}
-                  src={history.logo}
-                  alt="Islamic Azad University's image"
-                  style={{
-                    border: "2px solid white",
-                    borderRadius: "100%",
-                    objectFit: "cover",
-                    objectPosition: "center",
-                  }}
-                />
-              </Flex>
+              <Image
+                width={60}
+                height={60}
+                src={history.logo}
+                alt="Islamic Azad University's image"
+                style={{
+                  width: "60px",
+                  height: "60px",
+                  border: "2px solid white",
+                  borderRadius: "100%",
+                  objectFit: "cover",
+                  objectPosition: "center",
+                }}
+              />
               <Flex width="100%" flexDirection="column" gap={2}>
                 <Heading
                   size="md"

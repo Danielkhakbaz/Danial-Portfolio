@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import PageTransition from "utils/page-transition";
+import PageTransition from "lib/utils/page-transition";
 import { Flex, Heading, Code, Text, Button } from "@chakra-ui/react";
 import { FaArrowRotateLeft } from "react-icons/fa6";
 import { FaHome } from "react-icons/fa";

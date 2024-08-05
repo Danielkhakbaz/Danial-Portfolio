@@ -1,8 +1,8 @@
 import { Fragment } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import PageTransition from "utils/page-transition";
-import { projects } from "app/projects/projects";
+import PageTransition from "lib/utils/page-transition";
+import { projects } from "lib/constants";
 import {
   Flex,
   Button,

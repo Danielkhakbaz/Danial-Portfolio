@@ -1,5 +1,5 @@
 import ExperienceCard from "app/experiences/experiences/experinces-card";
-import { workExperiences } from "app/experiences/experiences/work-experiences";
+import { workExperiences } from "lib/constants";
 import { Flex } from "@chakra-ui/react";
 
 const Experiences = async () => {

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import PageTransition from "utils/page-transition";
+import PageTransition from "lib/utils/page-transition";
 import ProjectCard from "app/projects/project-card";
-import { projects } from "app/projects/projects";
+import { projects } from "lib/constants";
 import { Flex, Heading, Grid, GridItem } from "@chakra-ui/react";
 
 export const metadata: Metadata = {

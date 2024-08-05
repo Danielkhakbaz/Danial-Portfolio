@@ -1,9 +1,9 @@
 "use client";
 
-import { ReactElement } from "react";
 import NextLink from "next/link";
 import dynamic from "next/dynamic";
 import { usePathname } from "next/navigation";
+import { menuItems } from "lib/constants";
 import {
   Link,
   Flex,
@@ -13,52 +13,11 @@ import {
   MenuItem,
   IconButton,
 } from "@chakra-ui/react";
-import {
-  FaHome,
-  FaLayerGroup,
-  FaMoneyBillWave,
-  FaCode,
-  FaComments,
-  FaBars,
-} from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
 
-const MotionComponent = dynamic(() => import("utils/motion"), {
+const MotionComponent = dynamic(() => import("lib/utils/motion"), {
   ssr: false,
 });
-
-type MenuItemsType = {
-  href: string;
-  label: string;
-  mobileIcon: ReactElement;
-};
-
-export const menuItems: MenuItemsType[] = [
-  {
-    href: "/",
-    label: "Home",
-    mobileIcon: <FaHome style={{ fontSize: "15px" }} />,
-  },
-  {
-    href: "/projects",
-    label: "Projects",
-    mobileIcon: <FaLayerGroup style={{ fontSize: "15px" }} />,
-  },
-  {
-    href: "/experiences",
-    label: "Experiences",
-    mobileIcon: <FaMoneyBillWave style={{ fontSize: "15px" }} />,
-  },
-  {
-    href: "/blog",
-    label: "Blog",
-    mobileIcon: <FaCode style={{ fontSize: "15px" }} />,
-  },
-  {
-    href: "/guestbook",
-    label: "Guestbook",
-    mobileIcon: <FaComments style={{ fontSize: "15px" }} />,
-  },
-];
 
 export const WebMenu = () => {
   const path = usePathname();
@@ -114,7 +73,7 @@ export const MobileMenu = () => {
         icon={<FaBars />}
         variant="outline"
       />
-      <MenuList>
+      <MenuList backgroundColor="black">
         {menuItems.map(({ href, label, mobileIcon }) => {
           const isActive = path === href || path.startsWith(`${href}/`);
 
@@ -124,7 +83,7 @@ export const MobileMenu = () => {
               as={NextLink}
               href={href}
               icon={mobileIcon}
-              backgroundColor="black.700"
+              backgroundColor="black"
               color={isActive ? "#28AABC" : "#FFF"}
               _hover={{
                 color: "#28AABC",

@@ -1,5 +1,7 @@
+import PageTransition from "lib/utils/page-transition";
+
 const BlogPage = async () => {
-  return <></>;
+  return <PageTransition>Blog</PageTransition>;
 };
 
 export default BlogPage;

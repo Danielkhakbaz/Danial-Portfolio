@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 import dynamic from "next/dynamic";
 import { useMediaQuery } from "@chakra-ui/react";
 
-const MotionComponent = dynamic(() => import("utils/motion"), {
+const MotionComponent = dynamic(() => import("lib/utils/motion"), {
   ssr: false,
 });
 
