@@ -6,11 +6,7 @@ import { Flex, Link } from "@chakra-ui/react";
 const Links = async () => {
   return (
     <HomePageSectionMaker label="Links">
-      <Flex
-        justifyContent="space-between"
-        flexWrap="wrap"
-        gap={{ base: 12, md: 2 }}
-      >
+      <Flex justifyContent="space-between" flexWrap="wrap" gap={2}>
         {socials.map((social) => (
           <Link
             as={NextLink}
