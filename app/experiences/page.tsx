@@ -17,7 +17,7 @@ const ExperiencesPage = async () => {
         <Heading>Skills & Experinces</Heading>
         <Flex flexDirection="column" gap={8}>
           <Skills />
-          <Divider borderWidth={2} />
+          <Divider borderWidth={2} borderColor="#393939" />
           <Experiences />
         </Flex>
       </Flex>

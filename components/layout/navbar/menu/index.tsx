@@ -71,7 +71,18 @@ export const MobileMenu = () => {
         as={IconButton}
         aria-label="Options"
         icon={<FaBars />}
+        backgroundColor="black"
         variant="outline"
+        color="white"
+        _hover={{
+          backgroundColor: "black",
+        }}
+        _active={{
+          backgroundColor: "black",
+        }}
+        _focus={{
+          backgroundColor: "black",
+        }}
       />
       <MenuList backgroundColor="black">
         {menuItems.map(({ href, label, mobileIcon }) => {

@@ -98,7 +98,7 @@ const ExperinceCard = async ({ experience }: ExperiencesProps) => {
           </Text>
         ))}
       </Flex>
-      {experience.divider && <Divider borderWidth={2} />}
+      {experience.divider && <Divider borderWidth={2} borderColor="#393939" />}
     </Fragment>
   );
 };

@@ -70,7 +70,7 @@ const ProjectsID = async ({ params }: ProjectsIDProps) => {
                 </Badge>
                 {section.component}
               </Flex>
-              {section.divider && <Divider />}
+              {section.divider && <Divider borderColor="#393939" />}
             </Fragment>
           ))}
         </Flex>

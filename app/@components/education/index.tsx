@@ -49,7 +49,9 @@ const Education = async () => {
                 </Flex>
               </Flex>
             </Flex>
-            {history.divider && <Divider borderWidth={2} />}
+            {history.divider && (
+              <Divider borderWidth={2} borderColor="#393939" />
+            )}
           </Fragment>
         ))}
       </Flex>
