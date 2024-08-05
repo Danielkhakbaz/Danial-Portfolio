@@ -5,6 +5,7 @@ import DanialPlayingBasketball from "public/images/danial-at-basketball.webp";
 import DanialAtShomal from "public/images/danial-at-shomal.webp";
 import DanialFromWorkAtHome from "public/images/danial-from-work-at-home.webp";
 import DanialAtCafe from "public/images/danial-at-cafe.webp";
+import { motion } from "framer-motion";
 import { Grid, GridItem, Flex, useMediaQuery } from "@chakra-ui/react";
 
 const ImagesGrid = () => {
@@ -28,21 +29,27 @@ const ImagesGrid = () => {
           position="relative"
           marginBottom={4}
         >
-          <Image
-            src={DanialAtCafe}
-            sizes="(max-width: 768px) 213px, 40vw"
-            alt="Danial Khakbaz at cafe"
-            fill
-            priority
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              objectPosition: "center",
-              borderTopLeftRadius: 20,
-              borderBottomLeftRadius: isLargerThan768 ? 20 : 0,
-            }}
-          />
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.25 }}
+          >
+            <Image
+              src={DanialAtCafe}
+              sizes="(max-width: 768px) 213px, 40vw"
+              alt="Danial Khakbaz at cafe"
+              fill
+              priority
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "center",
+                borderTopLeftRadius: 20,
+                borderBottomLeftRadius: isLargerThan768 ? 20 : 0,
+              }}
+            />
+          </motion.div>
         </Flex>
       </GridItem>
       <GridItem
@@ -56,20 +63,26 @@ const ImagesGrid = () => {
           position="relative"
           marginBottom={4}
         >
-          <Image
-            src={DanialPlayingBasketball}
-            sizes="(max-width: 768px) 450px, 80vw"
-            alt="Danial Khakbaz playing basketball"
-            fill
-            priority
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              objectPosition: isLargerThan768 ? "45% 0" : "center",
-              borderBottomLeftRadius: isLargerThan768 ? 0 : 20,
-            }}
-          />
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+          >
+            <Image
+              src={DanialPlayingBasketball}
+              sizes="(max-width: 768px) 450px, 80vw"
+              alt="Danial Khakbaz playing basketball"
+              fill
+              priority
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: isLargerThan768 ? "45% 0" : "center",
+                borderBottomLeftRadius: isLargerThan768 ? 0 : 20,
+              }}
+            />
+          </motion.div>
         </Flex>
       </GridItem>
       <GridItem
@@ -81,21 +94,27 @@ const ImagesGrid = () => {
           position="relative"
           marginBottom={4}
         >
-          <Image
-            src={DanialAtShomal}
-            sizes="(max-width: 768px) 450px, 80vw"
-            alt="Danial Khakbaz at the north of Iran"
-            fill
-            priority
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              objectPosition: isLargerThan768 ? "0 75%" : "center",
-              borderTopRightRadius: isLargerThan768 ? 0 : 20,
-              borderBottomRightRadius: isLargerThan768 ? 20 : 0,
-            }}
-          />
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.75 }}
+          >
+            <Image
+              src={DanialAtShomal}
+              sizes="(max-width: 768px) 450px, 80vw"
+              alt="Danial Khakbaz at the north of Iran"
+              fill
+              priority
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: isLargerThan768 ? "0 75%" : "center",
+                borderTopRightRadius: isLargerThan768 ? 0 : 20,
+                borderBottomRightRadius: isLargerThan768 ? 20 : 0,
+              }}
+            />
+          </motion.div>
         </Flex>
       </GridItem>
       <GridItem
@@ -107,21 +126,27 @@ const ImagesGrid = () => {
           position="relative"
           marginBottom={4}
         >
-          <Image
-            src={DanialFromWorkAtHome}
-            sizes="(max-width: 768px) 213px, 40vw"
-            alt="Danial Khakbaz working from home"
-            fill
-            priority
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              objectPosition: "center",
-              borderTopRightRadius: isLargerThan768 ? 20 : 0,
-              borderBottomRightRadius: isLargerThan768 ? 0 : 20,
-            }}
-          />
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1 }}
+          >
+            <Image
+              src={DanialFromWorkAtHome}
+              sizes="(max-width: 768px) 213px, 40vw"
+              alt="Danial Khakbaz working from home"
+              fill
+              priority
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "center",
+                borderTopRightRadius: isLargerThan768 ? 20 : 0,
+                borderBottomRightRadius: isLargerThan768 ? 0 : 20,
+              }}
+            />
+          </motion.div>
         </Flex>
       </GridItem>
     </Grid>
