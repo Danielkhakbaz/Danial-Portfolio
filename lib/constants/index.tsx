@@ -357,6 +357,7 @@ export const projects: ProjectsType[] = [
         ),
       },
     ],
+    delay: 0.5,
   },
   {
     link: "notes-app2",
@@ -441,6 +442,7 @@ export const projects: ProjectsType[] = [
         ),
       },
     ],
+    delay: 0.75,
   },
   {
     link: "notes-app3",
@@ -525,6 +527,7 @@ export const projects: ProjectsType[] = [
         ),
       },
     ],
+    delay: 1,
   },
   {
     link: "notes-app4",
@@ -609,6 +612,7 @@ export const projects: ProjectsType[] = [
         ),
       },
     ],
+    delay: 1.25,
   },
   {
     link: "notes-app5",
@@ -693,6 +697,7 @@ export const projects: ProjectsType[] = [
         ),
       },
     ],
+    delay: 1.5,
   },
 ];
 
@@ -724,6 +729,7 @@ export const workExperiences: WorkExperiencesType[] = [
     workplace_type: "Remote",
     location: "Tehran, Iran",
     divider: true,
+    delay: 0.75,
   },
   {
     logo: { src: ISCLogo, alt: "Informatics Services Corporation(ISC)'s logo" },
@@ -748,6 +754,7 @@ export const workExperiences: WorkExperiencesType[] = [
     workplace_type: "Hybrid",
     location: "Tehran, Iran",
     divider: true,
+    delay: 1,
   },
   {
     logo: { src: HadishLogo, alt: "Hadish Sabz Parseh's logo" },
@@ -768,6 +775,7 @@ export const workExperiences: WorkExperiencesType[] = [
     workplace_type: "Hybrid",
     location: "Tehran, Iran",
     divider: true,
+    delay: 1.25,
   },
   {
     logo: { src: CrossLogo, alt: "Cross sport's logo" },
@@ -784,6 +792,7 @@ export const workExperiences: WorkExperiencesType[] = [
     workplace_type: "On-site",
     location: "Tehran, Iran",
     divider: false,
+    delay: 1.5,
   },
 ];
 

@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import Image, { StaticImageData } from "next/image";
 import { Flex, Heading, Text, Divider } from "@chakra-ui/react";
 
@@ -23,10 +22,11 @@ type ExperiencesProps = {
 
 const ExperinceCard = async ({ experience }: ExperiencesProps) => {
   return (
-    <Fragment key={experience.company_name}>
+    <>
       <Flex
         flexDirection={{ base: "column", md: "row" }}
         gap={{ base: 2, md: 6 }}
+        marginBottom={3}
       >
         <Image
           width={70}
@@ -98,8 +98,10 @@ const ExperinceCard = async ({ experience }: ExperiencesProps) => {
           </Text>
         ))}
       </Flex>
-      {experience.divider && <Divider borderWidth={2} borderColor="#393939" />}
-    </Fragment>
+      {experience.divider && (
+        <Divider borderWidth={2} borderColor="#393939" marginTop={4} />
+      )}
+    </>
   );
 };
 

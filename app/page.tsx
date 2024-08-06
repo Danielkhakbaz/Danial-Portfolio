@@ -1,4 +1,5 @@
 import PageTransition from "lib/utils/page-transition";
+import MotionOpacity from "lib/utils/motion-opacity";
 import ImagesGrid from "app/@components/images-grid";
 import FavQuote from "app/@components/fav-quote";
 import Summary from "app/@components/summary";
@@ -15,14 +16,30 @@ const HomePage = async () => {
     <PageTransition>
       <Flex flexDirection="column" gap={6}>
         <ImagesGrid />
-        <FavQuote />
-        <Summary />
-        <About />
-        <Bio />
-        <MainTechs />
-        <Interests />
-        <Links />
-        <Education />
+        <MotionOpacity delay={1.25}>
+          <FavQuote />
+        </MotionOpacity>
+        <MotionOpacity delay={1.5}>
+          <Summary />
+        </MotionOpacity>
+        <MotionOpacity delay={1.75}>
+          <About />
+        </MotionOpacity>
+        <MotionOpacity delay={2}>
+          <Bio />
+        </MotionOpacity>
+        <MotionOpacity delay={2.25}>
+          <MainTechs />
+        </MotionOpacity>
+        <MotionOpacity delay={2.5}>
+          <Interests />
+        </MotionOpacity>
+        <MotionOpacity delay={2.75}>
+          <Links />
+        </MotionOpacity>
+        <MotionOpacity delay={3}>
+          <Education />
+        </MotionOpacity>
       </Flex>
     </PageTransition>
   );

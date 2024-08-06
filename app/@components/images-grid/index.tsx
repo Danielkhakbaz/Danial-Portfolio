@@ -1,11 +1,11 @@
 "use client";
 
 import Image from "next/image";
+import MotionOpacity from "lib/utils/motion-opacity";
 import DanialPlayingBasketball from "public/images/danial-at-basketball.webp";
 import DanialAtShomal from "public/images/danial-at-shomal.webp";
 import DanialFromWorkAtHome from "public/images/danial-from-work-at-home.webp";
 import DanialAtCafe from "public/images/danial-at-cafe.webp";
-import { motion } from "framer-motion";
 import { Grid, GridItem, Flex, useMediaQuery } from "@chakra-ui/react";
 
 const ImagesGrid = () => {
@@ -29,11 +29,7 @@ const ImagesGrid = () => {
           position="relative"
           marginBottom={4}
         >
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.25 }}
-          >
+          <MotionOpacity delay={0.25}>
             <Image
               src={DanialAtCafe}
               sizes="(max-width: 768px) 213px, 40vw"
@@ -49,7 +45,7 @@ const ImagesGrid = () => {
                 borderBottomLeftRadius: isLargerThan768 ? 20 : 0,
               }}
             />
-          </motion.div>
+          </MotionOpacity>
         </Flex>
       </GridItem>
       <GridItem
@@ -63,11 +59,7 @@ const ImagesGrid = () => {
           position="relative"
           marginBottom={4}
         >
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-          >
+          <MotionOpacity delay={0.5}>
             <Image
               src={DanialPlayingBasketball}
               sizes="(max-width: 768px) 450px, 80vw"
@@ -82,7 +74,7 @@ const ImagesGrid = () => {
                 borderBottomLeftRadius: isLargerThan768 ? 0 : 20,
               }}
             />
-          </motion.div>
+          </MotionOpacity>
         </Flex>
       </GridItem>
       <GridItem
@@ -94,11 +86,7 @@ const ImagesGrid = () => {
           position="relative"
           marginBottom={4}
         >
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.75 }}
-          >
+          <MotionOpacity delay={0.75}>
             <Image
               src={DanialAtShomal}
               sizes="(max-width: 768px) 450px, 80vw"
@@ -114,7 +102,7 @@ const ImagesGrid = () => {
                 borderBottomRightRadius: isLargerThan768 ? 20 : 0,
               }}
             />
-          </motion.div>
+          </MotionOpacity>
         </Flex>
       </GridItem>
       <GridItem
@@ -126,11 +114,7 @@ const ImagesGrid = () => {
           position="relative"
           marginBottom={4}
         >
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1 }}
-          >
+          <MotionOpacity delay={1}>
             <Image
               src={DanialFromWorkAtHome}
               sizes="(max-width: 768px) 213px, 40vw"
@@ -146,7 +130,7 @@ const ImagesGrid = () => {
                 borderBottomRightRadius: isLargerThan768 ? 0 : 20,
               }}
             />
-          </motion.div>
+          </MotionOpacity>
         </Flex>
       </GridItem>
     </Grid>

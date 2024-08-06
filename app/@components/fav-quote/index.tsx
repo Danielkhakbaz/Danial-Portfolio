@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { quotes } from "lib/constants";
-import { Center, Flex, Text } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 
 const FavQuote = () => {
   const [randomNumber, setRandomNumber] = useState<number>(0);
@@ -12,12 +12,14 @@ const FavQuote = () => {
   }, []);
 
   return (
-    <Center
+    <Flex
+      width="100%"
       fontWeight="bold"
       backgroundColor="blackAlpha.900"
       color="white"
       display="inline-flex"
       justifyContent="space-between"
+      textAlign="center"
       borderRadius={20}
       padding={5}
     >
@@ -29,7 +31,7 @@ const FavQuote = () => {
           </Text>
         </Text>
       </Flex>
-    </Center>
+    </Flex>
   );
 };
 

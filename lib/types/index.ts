@@ -49,6 +49,7 @@ export type ProjectsType = {
     component: ReactElement;
     divider?: boolean;
   }[];
+  delay: number;
 };
 
 export type StacksType = {
@@ -83,4 +84,5 @@ export type WorkExperiencesType = {
     paragraph: string;
   }[];
   divider?: boolean;
+  delay: number;
 };
