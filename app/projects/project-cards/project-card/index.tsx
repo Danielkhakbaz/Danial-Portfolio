@@ -19,6 +19,7 @@ const ProjectCard = ({ imageSrc, alt, title, description }: CardProps) => {
       borderRadius="0.4rem"
       transition="background-color 0.25s ease-out"
       padding={4}
+      cursor="pointer"
       _hover={{ backgroundColor: "#202020" }}
     >
       <Image

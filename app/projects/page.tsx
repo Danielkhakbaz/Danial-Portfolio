@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import PageTransition from "lib/utils/page-transition";
 import ProjectCards from "app/projects/project-cards";
 
 export const metadata: Metadata = {
@@ -8,11 +7,7 @@ export const metadata: Metadata = {
 };
 
 const ProjectsPage = async () => {
-  return (
-    <PageTransition>
-      <ProjectCards />
-    </PageTransition>
-  );
+  return <ProjectCards />;
 };
 
 export default ProjectsPage;

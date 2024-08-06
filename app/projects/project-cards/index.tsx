@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import PageTransition from "lib/utils/page-transition";
 import MotionOpacity from "lib/utils/motion-opacity";
 import ProjectCard from "app/projects/project-cards/project-card";
 import ProjectModal from "app/projects/project-cards/project-modal";
@@ -14,7 +15,7 @@ const ProjectCards = () => {
   const [project, setProject] = useState<ProjectsType>();
 
   return (
-    <>
+    <PageTransition>
       <Flex
         flexDirection="column"
         filter="auto"
@@ -41,24 +42,26 @@ const ProjectCards = () => {
                 setProject(project);
               }}
             >
-              <ProjectCard
-                imageSrc={project.images[0].src}
-                alt={project.images[0].alt}
-                title={project.title}
-                description={project.description}
-              />
+              <MotionOpacity delay={project.delay}>
+                <ProjectCard
+                  imageSrc={project.images[0].src}
+                  alt={project.images[0].alt}
+                  title={project.title}
+                  description={project.description}
+                />
+              </MotionOpacity>
             </motion.div>
           ))}
         </Grid>
       </Flex>
-      {project && selectedID && (
+      {selectedID && (
         <ProjectModal
-          project={project}
+          project={project!}
           selectedID={selectedID}
           setSelectedID={() => setSelectedID(null)}
         />
       )}
-    </>
+    </PageTransition>
   );
 };
 

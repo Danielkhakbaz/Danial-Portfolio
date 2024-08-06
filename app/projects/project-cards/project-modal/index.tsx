@@ -33,7 +33,7 @@ const ProjectModal = ({
         tag="div"
         layoutId={selectedID}
         style={{
-          width: "100%",
+          width: "50%",
           backgroundColor: "#181818",
           position: "absolute",
           top: "0%",
