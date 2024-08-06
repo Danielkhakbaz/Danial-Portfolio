@@ -32,7 +32,6 @@ export type SocialsType = {
 };
 
 export type ProjectsType = {
-  link: string;
   title: string;
   description: string;
   images: {

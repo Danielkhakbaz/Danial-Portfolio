@@ -275,7 +275,6 @@ export const poweredBy: PoweredByType = {
 
 export const projects: ProjectsType[] = [
   {
-    link: "notes-app1",
     title: "Notes App 1",
     description:
       "a lot of description a lot of description a lot of description a lot of description a lot of description",
@@ -360,7 +359,6 @@ export const projects: ProjectsType[] = [
     delay: 0.5,
   },
   {
-    link: "notes-app2",
     title: "Notes App 2",
     description:
       "a lot of description a lot of description a lot of description a lot of description a lot of description",
@@ -445,7 +443,6 @@ export const projects: ProjectsType[] = [
     delay: 0.75,
   },
   {
-    link: "notes-app3",
     title: "Notes App 3",
     description:
       "a lot of description a lot of description a lot of description a lot of description a lot of description",
@@ -530,7 +527,6 @@ export const projects: ProjectsType[] = [
     delay: 1,
   },
   {
-    link: "notes-app4",
     title: "Notes App 4",
     description:
       "a lot of description a lot of description a lot of description a lot of description a lot of description",
@@ -615,7 +611,6 @@ export const projects: ProjectsType[] = [
     delay: 1.25,
   },
   {
-    link: "notes-app5",
     title: "Notes App 5",
     description:
       "a lot of description a lot of description a lot of description a lot of description a lot of description",
