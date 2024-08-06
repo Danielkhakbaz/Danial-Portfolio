@@ -6,6 +6,7 @@ import ScrollToTop from "lib/utils/scroll-to-top";
 import { ChakraProvider } from "lib/providers/chakra";
 import { LatoFont } from "styles/font";
 import { Container } from "@chakra-ui/react";
+import "styles/globals.css";
 
 type RootLayoutProps = {
   children: ReactNode;

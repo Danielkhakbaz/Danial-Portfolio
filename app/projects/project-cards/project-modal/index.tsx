@@ -30,13 +30,16 @@ const ProjectModal = ({
   return (
     <AnimatePresence>
       <MotionComponent
+        className="motion__project--modal"
         tag="div"
         layoutId={selectedID}
         style={{
-          width: "50%",
+          maxWidth: "768px",
+          width: "100%",
           backgroundColor: "#181818",
           position: "absolute",
-          top: "0%",
+          top: "70%",
+          left: "50%",
           borderRadius: "1rem",
           padding: "2rem",
         }}
