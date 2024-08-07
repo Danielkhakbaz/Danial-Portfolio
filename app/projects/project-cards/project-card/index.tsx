@@ -1,10 +1,10 @@
 "use client";
 
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import { Flex, Heading, Text } from "@chakra-ui/react";
 
 type CardProps = {
-  imageSrc: StaticImageData;
+  imageSrc: string;
   alt: string;
   title: string;
   description: string;
@@ -44,9 +44,9 @@ const ProjectCard = ({ imageSrc, alt, title, description }: CardProps) => {
         {title}
       </Heading>
       <Text fontSize={15} textAlign="justify">
-        {description.length < 100
+        {description.length <= 101
           ? description
-          : `${description.slice(0, 100)}...`}
+          : `${description.slice(0, 101)} ...`}
       </Text>
     </Flex>
   );

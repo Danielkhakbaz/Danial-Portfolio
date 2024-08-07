@@ -3,7 +3,6 @@ import UIDLogo from "public/images/logos/companies/uid-logo.webp";
 import ISCLogo from "public/images/logos/companies/isc-logo.webp";
 import HadishLogo from "public/images/logos/companies/hadish-logo.webp";
 import CrossLogo from "public/images/logos/companies/cross-logo.webp";
-import SampleImage from "public/images/Sketch.webp";
 import {
   MenuItemsType,
   BioSectionsType,
@@ -42,6 +41,10 @@ import {
   SiJavascript,
   SiVercel,
   SiGithub,
+  SiDaisyui,
+  SiPrisma,
+  SiFramer,
+  SiDrizzle,
 } from "react-icons/si";
 
 export const menuItems: MenuItemsType[] = [
@@ -223,8 +226,8 @@ export const socials: SocialsType[] = [
 
 export const stacks: StacksType = {
   react: {
-    label: "React.js",
     icon: <FaReact />,
+    label: "React.js",
     backgroundColor: "cyan.500",
     color: "white",
   },
@@ -258,6 +261,30 @@ export const stacks: StacksType = {
     backgroundColor: "yellow.400",
     color: "yellow.900",
   },
+  daisyui: {
+    icon: <SiDaisyui />,
+    label: "DaisyUI",
+    backgroundColor: "#5C15F9",
+    color: "white",
+  },
+  prisma: {
+    icon: <SiPrisma />,
+    label: "Prisma",
+    backgroundColor: "#153A51",
+    color: "white",
+  },
+  framer: {
+    icon: <SiFramer />,
+    label: "Framer Motion",
+    backgroundColor: "#E402B9",
+    color: "black",
+  },
+  drizzle: {
+    icon: <SiDrizzle />,
+    label: "Drizzle",
+    backgroundColor: "#BFEF4C",
+    color: "black",
+  },
 };
 
 export const poweredBy: PoweredByType = {
@@ -275,21 +302,28 @@ export const poweredBy: PoweredByType = {
 
 export const projects: ProjectsType[] = [
   {
-    title: "Notes App 1",
+    title: "Notes App",
     description:
-      "a lot of description a lot of description a lot of description a lot of description a lot of description",
+      "a Note-app using LocalStorage API, so your data will never be removed unless you choose to remove it.",
+    icon: 1,
     images: [
-      { src: SampleImage, alt: "1" },
-      { src: SampleImage, alt: "2" },
+      {
+        src: "/images/projects/notes-app/light-house.png",
+        alt: "The lighthouse test's result for the notes-app website",
+      },
+      {
+        src: "/images/projects/notes-app/screen-shot.png",
+        alt: "The screenshot of the notes-app website",
+      },
     ],
-    poweredBy: poweredBy.github,
+    poweredBy: poweredBy.vercel,
     sections: [
       {
         label: "Website",
         component: (
           <Link
             isExternal
-            href="https://href.com"
+            href="https://danial-notes-app.vercel.app/"
             target="_blank"
             style={{
               color: "white",
@@ -299,7 +333,7 @@ export const projects: ProjectsType[] = [
               opacity: 0.8,
             }}
           >
-            https://lable.com
+            https://danial-notes-app.com
           </Link>
         ),
         divider: true,
@@ -309,7 +343,7 @@ export const projects: ProjectsType[] = [
         component: (
           <Link
             isExternal
-            href="https://href.com"
+            href="https://github.com/Danielkhakbaz/Notes-App"
             target="_blank"
             style={{
               color: "white",
@@ -319,7 +353,7 @@ export const projects: ProjectsType[] = [
               opacity: 0.8,
             }}
           >
-            https://lable.com
+            Github
             <FaRightFromBracket />
           </Link>
         ),
@@ -330,12 +364,10 @@ export const projects: ProjectsType[] = [
         component: (
           <Flex width="100%" flexWrap="wrap" gap={4}>
             {[
-              stacks.react,
               stacks.next,
-              stacks.chakra,
               stacks.javascript,
-              stacks.typescript,
               stacks.tailwind,
+              stacks.daisyui,
             ].map(({ icon, label, backgroundColor, color }) => (
               <Badge
                 key={label}
@@ -359,12 +391,18 @@ export const projects: ProjectsType[] = [
     delay: 0.5,
   },
   {
-    title: "Notes App 2",
-    description:
-      "a lot of description a lot of description a lot of description a lot of description a lot of description",
+    title: "The Film Inventory",
+    description: "a Inventory of a lot of animes from all across the globe.",
+    icon: 1,
     images: [
-      { src: SampleImage, alt: "1" },
-      { src: SampleImage, alt: "2" },
+      {
+        src: "/images/projects/the-film-inventory/light-house.png",
+        alt: "The lighthouse test's result for the the film inventory website",
+      },
+      {
+        src: "/images/projects/the-film-inventory/screen-shot.png",
+        alt: "The screenshot of the the film inventory website",
+      },
     ],
     poweredBy: poweredBy.vercel,
     sections: [
@@ -373,7 +411,7 @@ export const projects: ProjectsType[] = [
         component: (
           <Link
             isExternal
-            href="https://href.com"
+            href="https://the-film-inventory.vercel.app/"
             target="_blank"
             style={{
               color: "white",
@@ -383,7 +421,7 @@ export const projects: ProjectsType[] = [
               opacity: 0.8,
             }}
           >
-            https://lable.com
+            https://the-film-inventory.com/
           </Link>
         ),
         divider: true,
@@ -393,7 +431,7 @@ export const projects: ProjectsType[] = [
         component: (
           <Link
             isExternal
-            href="https://href.com"
+            href="https://github.com/Danielkhakbaz/The-Film-Inventory"
             target="_blank"
             style={{
               color: "white",
@@ -403,7 +441,7 @@ export const projects: ProjectsType[] = [
               opacity: 0.8,
             }}
           >
-            https://lable.com
+            Github
             <FaRightFromBracket />
           </Link>
         ),
@@ -414,12 +452,12 @@ export const projects: ProjectsType[] = [
         component: (
           <Flex width="100%" flexWrap="wrap" gap={4}>
             {[
-              stacks.react,
               stacks.next,
-              stacks.chakra,
-              stacks.javascript,
               stacks.typescript,
               stacks.tailwind,
+              stacks.daisyui,
+              stacks.framer,
+              stacks.prisma,
             ].map(({ icon, label, backgroundColor, color }) => (
               <Badge
                 key={label}
@@ -443,12 +481,18 @@ export const projects: ProjectsType[] = [
     delay: 0.75,
   },
   {
-    title: "Notes App 3",
-    description:
-      "a lot of description a lot of description a lot of description a lot of description a lot of description",
+    title: "Danial's Links",
+    description: "Access my links via this website.",
+    icon: 1,
     images: [
-      { src: SampleImage, alt: "1" },
-      { src: SampleImage, alt: "2" },
+      {
+        src: "/images/projects/links/light-house.png",
+        alt: "The lighthouse test's result for the danial's links website",
+      },
+      {
+        src: "/images/projects/links/screen-shot.png",
+        alt: "The screenshot of the danial's links website",
+      },
     ],
     poweredBy: poweredBy.vercel,
     sections: [
@@ -457,7 +501,7 @@ export const projects: ProjectsType[] = [
         component: (
           <Link
             isExternal
-            href="https://href.com"
+            href="https://danial-links.vercel.app/"
             target="_blank"
             style={{
               color: "white",
@@ -467,7 +511,7 @@ export const projects: ProjectsType[] = [
               opacity: 0.8,
             }}
           >
-            https://lable.com
+            https://danial-links.com
           </Link>
         ),
         divider: true,
@@ -477,7 +521,7 @@ export const projects: ProjectsType[] = [
         component: (
           <Link
             isExternal
-            href="https://href.com"
+            href="https://github.com/Danielkhakbaz/links"
             target="_blank"
             style={{
               color: "white",
@@ -487,7 +531,7 @@ export const projects: ProjectsType[] = [
               opacity: 0.8,
             }}
           >
-            https://lable.com
+            Github
             <FaRightFromBracket />
           </Link>
         ),
@@ -497,29 +541,24 @@ export const projects: ProjectsType[] = [
         label: "Stacks",
         component: (
           <Flex width="100%" flexWrap="wrap" gap={4}>
-            {[
-              stacks.react,
-              stacks.next,
-              stacks.chakra,
-              stacks.javascript,
-              stacks.typescript,
-              stacks.tailwind,
-            ].map(({ icon, label, backgroundColor, color }) => (
-              <Badge
-                key={label}
-                display="inline-flex"
-                alignItems="center"
-                gap={2}
-                variant="subtle"
-                backgroundColor={backgroundColor}
-                color={color}
-                fontSize="12px"
-                textTransform="none"
-              >
-                {icon}
-                {label}
-              </Badge>
-            ))}
+            {[stacks.next, stacks.typescript, stacks.tailwind].map(
+              ({ icon, label, backgroundColor, color }) => (
+                <Badge
+                  key={label}
+                  display="inline-flex"
+                  alignItems="center"
+                  gap={2}
+                  variant="subtle"
+                  backgroundColor={backgroundColor}
+                  color={color}
+                  fontSize="12px"
+                  textTransform="none"
+                >
+                  {icon}
+                  {label}
+                </Badge>
+              )
+            )}
           </Flex>
         ),
       },
@@ -527,96 +566,18 @@ export const projects: ProjectsType[] = [
     delay: 1,
   },
   {
-    title: "Notes App 4",
-    description:
-      "a lot of description a lot of description a lot of description a lot of description a lot of description",
+    title: "Margelo Software Agency",
+    description: "a Clone of a software-agency website named margelo.",
+    icon: 1,
     images: [
-      { src: SampleImage, alt: "1" },
-      { src: SampleImage, alt: "2" },
-    ],
-    poweredBy: poweredBy.github,
-    sections: [
       {
-        label: "Website",
-        component: (
-          <Link
-            isExternal
-            href="https://href.com"
-            target="_blank"
-            style={{
-              color: "white",
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 4,
-              opacity: 0.8,
-            }}
-          >
-            https://lable.com
-          </Link>
-        ),
-        divider: true,
+        src: "/images/projects/software-agency-website/light-house.png",
+        alt: "The lighthouse test's result for the margelo website",
       },
       {
-        label: "Github",
-        component: (
-          <Link
-            isExternal
-            href="https://href.com"
-            target="_blank"
-            style={{
-              color: "white",
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 4,
-              opacity: 0.8,
-            }}
-          >
-            https://lable.com
-            <FaRightFromBracket />
-          </Link>
-        ),
-        divider: true,
+        src: "/images/projects/software-agency-website/screen-shot.png",
+        alt: "The screenshot of the margelo website",
       },
-      {
-        label: "Stacks",
-        component: (
-          <Flex width="100%" flexWrap="wrap" gap={4}>
-            {[
-              stacks.react,
-              stacks.next,
-              stacks.chakra,
-              stacks.javascript,
-              stacks.typescript,
-              stacks.tailwind,
-            ].map(({ icon, label, backgroundColor, color }) => (
-              <Badge
-                key={label}
-                display="inline-flex"
-                alignItems="center"
-                gap={2}
-                variant="subtle"
-                backgroundColor={backgroundColor}
-                color={color}
-                fontSize="12px"
-                textTransform="none"
-              >
-                {icon}
-                {label}
-              </Badge>
-            ))}
-          </Flex>
-        ),
-      },
-    ],
-    delay: 1.25,
-  },
-  {
-    title: "Notes App 5",
-    description:
-      "a lot of description a lot of description a lot of description a lot of description a lot of description",
-    images: [
-      { src: SampleImage, alt: "1" },
-      { src: SampleImage, alt: "2" },
     ],
     poweredBy: poweredBy.vercel,
     sections: [
@@ -625,7 +586,7 @@ export const projects: ProjectsType[] = [
         component: (
           <Link
             isExternal
-            href="https://href.com"
+            href="https://software-agency-website.vercel.app/"
             target="_blank"
             style={{
               color: "white",
@@ -635,7 +596,7 @@ export const projects: ProjectsType[] = [
               opacity: 0.8,
             }}
           >
-            https://lable.com
+            https://software-agency-website.com
           </Link>
         ),
         divider: true,
@@ -645,7 +606,7 @@ export const projects: ProjectsType[] = [
         component: (
           <Link
             isExternal
-            href="https://href.com"
+            href="https://github.com/Danielkhakbaz/Software-Agency-Website"
             target="_blank"
             style={{
               color: "white",
@@ -655,7 +616,161 @@ export const projects: ProjectsType[] = [
               opacity: 0.8,
             }}
           >
-            https://lable.com
+            Github
+            <FaRightFromBracket />
+          </Link>
+        ),
+        divider: true,
+      },
+      {
+        label: "Stacks",
+        component: (
+          <Flex width="100%" flexWrap="wrap" gap={4}>
+            {[stacks.next, stacks.typescript, stacks.tailwind].map(
+              ({ icon, label, backgroundColor, color }) => (
+                <Badge
+                  key={label}
+                  display="inline-flex"
+                  alignItems="center"
+                  gap={2}
+                  variant="subtle"
+                  backgroundColor={backgroundColor}
+                  color={color}
+                  fontSize="12px"
+                  textTransform="none"
+                >
+                  {icon}
+                  {label}
+                </Badge>
+              )
+            )}
+          </Flex>
+        ),
+      },
+    ],
+    delay: 1.25,
+  },
+  {
+    title: "Use-shared library",
+    description:
+      "a Simple react-hook using contextAPI in order to share a state throughout the whole app.",
+    icon: 0,
+    images: [{ src: "/images/projects/use-shared/screen-shot.png", alt: "1" }],
+    poweredBy: poweredBy.vercel,
+    sections: [
+      {
+        label: "Website",
+        component: (
+          <Link
+            isExternal
+            href="https://www.npmjs.com/package/@danielkhakbaz/use-shared"
+            target="_blank"
+            style={{
+              color: "white",
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 4,
+              opacity: 0.8,
+            }}
+          >
+            https://www.npmjs.com/package/@danielkhakbaz/use-shared
+          </Link>
+        ),
+        divider: true,
+      },
+      {
+        label: "Github",
+        component: (
+          <Link
+            isExternal
+            href="https://github.com/Danielkhakbaz/use-shared"
+            target="_blank"
+            style={{
+              color: "white",
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 4,
+              opacity: 0.8,
+            }}
+          >
+            Github
+            <FaRightFromBracket />
+          </Link>
+        ),
+        divider: true,
+      },
+      {
+        label: "Stacks",
+        component: (
+          <Flex width="100%" flexWrap="wrap" gap={4}>
+            {[stacks.react, stacks.javascript].map(
+              ({ icon, label, backgroundColor, color }) => (
+                <Badge
+                  key={label}
+                  display="inline-flex"
+                  alignItems="center"
+                  gap={2}
+                  variant="subtle"
+                  backgroundColor={backgroundColor}
+                  color={color}
+                  fontSize="12px"
+                  textTransform="none"
+                >
+                  {icon}
+                  {label}
+                </Badge>
+              )
+            )}
+          </Flex>
+        ),
+      },
+    ],
+    delay: 1.5,
+  },
+  {
+    title: "Emoji Todo",
+    description:
+      "Built with the cutting-edge technologies just to show the power of server-actions.",
+    icon: 0,
+    images: [{ src: "/images/projects/emoji-todo/screen-shot.png", alt: "1" }],
+    poweredBy: poweredBy.vercel,
+    sections: [
+      {
+        label: "Website",
+        component: (
+          <Link
+            isExternal
+            href="https://github.com/Danielkhakbaz/Emoji-todo"
+            target="_blank"
+            style={{
+              color: "white",
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 4,
+              opacity: 0.8,
+            }}
+          >
+            https://github.com/Danielkhakbaz/Emoji-todo
+          </Link>
+        ),
+        divider: true,
+      },
+      {
+        label: "Github",
+        component: (
+          <Link
+            isExternal
+            href="https://github.com/Danielkhakbaz/Emoji-todo"
+            target="_blank"
+            style={{
+              color: "white",
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 4,
+              opacity: 0.8,
+            }}
+          >
+            Github
             <FaRightFromBracket />
           </Link>
         ),
@@ -666,12 +781,10 @@ export const projects: ProjectsType[] = [
         component: (
           <Flex width="100%" flexWrap="wrap" gap={4}>
             {[
-              stacks.react,
               stacks.next,
-              stacks.chakra,
-              stacks.javascript,
               stacks.typescript,
               stacks.tailwind,
+              stacks.drizzle,
             ].map(({ icon, label, backgroundColor, color }) => (
               <Badge
                 key={label}

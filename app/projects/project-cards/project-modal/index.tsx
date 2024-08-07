@@ -13,6 +13,7 @@ import {
   Badge,
   Divider,
   Center,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import { FaArrowLeft } from "react-icons/fa";
 
@@ -27,6 +28,8 @@ const ProjectModal = ({
   selectedID,
   setSelectedID,
 }: ProjectModalProps) => {
+  const [isLargerThan768] = useMediaQuery("(min-width: 768px)");
+
   return (
     <AnimatePresence>
       <MotionComponent
@@ -34,11 +37,11 @@ const ProjectModal = ({
         tag="div"
         layoutId={selectedID}
         style={{
-          maxWidth: "768px",
+          maxWidth: "600px",
           width: "100%",
           backgroundColor: "#181818",
           position: "absolute",
-          top: "70%",
+          top: isLargerThan768 ? "50%" : "25%",
           left: "50%",
           borderRadius: "1rem",
           padding: "2rem",
@@ -48,8 +51,12 @@ const ProjectModal = ({
           <Flex gap={4}>
             <Button
               variant="outline"
-              borderColor="white"
+              color="white"
               aria-label="back-button"
+              _hover={{
+                backgroundColor: "white",
+                color: "black",
+              }}
               onClick={setSelectedID}
             >
               <FaArrowLeft />
@@ -104,6 +111,7 @@ const ProjectModal = ({
             <Badge
               fontSize={13}
               backgroundColor={project?.poweredBy.backgroundColor}
+              color="white"
               display="flex"
               alignItems="center"
               gap={2}

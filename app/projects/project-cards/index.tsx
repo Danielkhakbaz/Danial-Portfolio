@@ -19,7 +19,7 @@ const ProjectCards = () => {
       <Flex
         flexDirection="column"
         filter="auto"
-        blur={selectedID ? "5px" : ""}
+        blur={selectedID ? "5px" : "0px"}
         transitionProperty="all"
         transitionDuration=".2s"
         gap={6}
@@ -44,7 +44,7 @@ const ProjectCards = () => {
             >
               <MotionOpacity delay={project.delay}>
                 <ProjectCard
-                  imageSrc={project.images[0].src}
+                  imageSrc={project.images[project.icon].src}
                   alt={project.images[0].alt}
                   title={project.title}
                   description={project.description}

@@ -34,8 +34,9 @@ export type SocialsType = {
 export type ProjectsType = {
   title: string;
   description: string;
+  icon: number;
   images: {
-    src: StaticImageData;
+    src: string;
     alt: string;
   }[];
   poweredBy: {
@@ -62,7 +63,7 @@ export type StacksType = {
 
 export type PoweredByType = {
   [key: string]: {
-    label: string;
+    label: "Github" | "Vercel";
     icon: ReactElement;
     backgroundColor: string;
   };
