@@ -1,4 +1,5 @@
 import NextLink from "next/link";
+import MotionOpacity from "lib/utils/motion-opacity";
 import Logo from "components/layout/navbar/logo";
 import { WebMenu, MobileMenu } from "components/layout/navbar/menu";
 import { Container, Flex, Link } from "@chakra-ui/react";
@@ -24,12 +25,15 @@ const Navbar = async () => {
           paddingY={0.5}
           _hover={{ transform: "scale(1.1)" }}
         >
-          <Logo />
+          <MotionOpacity delay={0.25}>
+            <Logo />
+          </MotionOpacity>
         </Link>
       </Flex>
       <Flex
         width="50%"
         display={{ base: "none", md: "flex" }}
+        flexDirection="row"
         justifyContent="center"
         gap={6}
       >

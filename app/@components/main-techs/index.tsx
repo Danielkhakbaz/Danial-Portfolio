@@ -19,6 +19,11 @@ const MainTechs = async () => {
             display="flex"
             justifyContent="center"
             padding={2}
+            transitionProperty="all"
+            transitionDuration=".2s"
+            _hover={{
+              opacity: 0.75,
+            }}
             style={{
               background:
                 tech === "nextjs"

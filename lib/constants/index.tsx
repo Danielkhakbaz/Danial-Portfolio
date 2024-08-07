@@ -1,8 +1,8 @@
-import AzadUniversityLogo from "public/logos/college/azad-university-logo.webp";
-import UIDLogo from "public/logos/companies/uid-logo.webp";
-import ISCLogo from "public/logos/companies/isc-logo.webp";
-import HadishLogo from "public/logos/companies/hadish-logo.webp";
-import CrossLogo from "public/logos/companies/cross-logo.webp";
+import AzadUniversityLogo from "public/images/logos/college/azad-university-logo.webp";
+import UIDLogo from "public/images/logos/companies/uid-logo.webp";
+import ISCLogo from "public/images/logos/companies/isc-logo.webp";
+import HadishLogo from "public/images/logos/companies/hadish-logo.webp";
+import CrossLogo from "public/images/logos/companies/cross-logo.webp";
 import SampleImage from "public/images/Sketch.webp";
 import {
   MenuItemsType,

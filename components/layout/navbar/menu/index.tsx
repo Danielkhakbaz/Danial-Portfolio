@@ -3,6 +3,7 @@
 import NextLink from "next/link";
 import dynamic from "next/dynamic";
 import { usePathname } from "next/navigation";
+import MotionOpacity from "lib/utils/motion-opacity";
 import { menuItems } from "lib/constants";
 import {
   Link,
@@ -28,34 +29,35 @@ export const WebMenu = () => {
         const isActive = path === href || path.startsWith(`${href}/`);
 
         return (
-          <Link
-            as={NextLink}
-            key={label}
-            href={href}
-            display="flex"
-            flexDirection="column"
-            _hover={{ textDecoration: "none" }}
-          >
-            <Flex
-              alignItems="center"
-              transition="color 0.1s ease-in-out"
-              _hover={{
-                color: isActive ? "white" : "gray",
-              }}
+          <MotionOpacity key={label} delay={0.25}>
+            <Link
+              as={NextLink}
+              href={href}
+              display="flex"
+              flexDirection="column"
+              _hover={{ textDecoration: "none" }}
             >
-              {label}
-            </Flex>
-            {isActive && (
-              <MotionComponent
-                tag="span"
-                layoutId="active"
-                style={{
-                  width: "100%",
-                  border: "0.1rem solid #28AABC",
+              <Flex
+                alignItems="center"
+                transition="color 0.1s ease-in-out"
+                _hover={{
+                  color: isActive ? "white" : "gray",
                 }}
-              />
-            )}
-          </Link>
+              >
+                {label}
+              </Flex>
+              {isActive && (
+                <MotionComponent
+                  tag="span"
+                  layoutId="active"
+                  style={{
+                    width: "100%",
+                    border: "0.1rem solid #28AABC",
+                  }}
+                />
+              )}
+            </Link>
+          </MotionOpacity>
         );
       })}
     </>

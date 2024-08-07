@@ -1,5 +1,5 @@
 import Image from "next/image";
-import DanialKhakbazLogo from "public/logos/Danial-Khakbaz-Logo.webp";
+import DanialKhakbazLogo from "public/images/logos/Danial-Khakbaz-Logo.webp";
 
 const Logo = async () => {
   return (
