@@ -302,6 +302,95 @@ export const poweredBy: PoweredByType = {
 
 export const projects: ProjectsType[] = [
   {
+    title: "Danial's Portfolio",
+    description: "What can I say? This is just my portfolio.",
+    icon: 1,
+    images: [
+      {
+        src: "/images/projects/portfolio/light-house.png",
+        alt: "The lighthouse test's result for the danial's portfolio website",
+      },
+      {
+        src: "/images/projects/portfolio/screen-shot.png",
+        alt: "The screenshot of the danial's portfolio website",
+      },
+    ],
+    poweredBy: poweredBy.vercel,
+    sections: [
+      {
+        label: "Website",
+        component: (
+          <Link
+            isExternal
+            href="https://danieloo.vercel.app"
+            target="_blank"
+            style={{
+              color: "white",
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 4,
+              opacity: 0.8,
+            }}
+          >
+            https://danieloo.com
+          </Link>
+        ),
+        divider: true,
+      },
+      {
+        label: "Github",
+        component: (
+          <Link
+            isExternal
+            href="https://github.com/Danielkhakbaz/Danial-Portfolio"
+            target="_blank"
+            style={{
+              color: "white",
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 4,
+              opacity: 0.8,
+            }}
+          >
+            Github
+            <FaRightFromBracket />
+          </Link>
+        ),
+        divider: true,
+      },
+      {
+        label: "Stacks",
+        component: (
+          <Flex width="100%" flexWrap="wrap" gap={4}>
+            {[
+              stacks.next,
+              stacks.typescript,
+              stacks.chakra,
+              stacks.framer,
+              stacks.drizzle,
+            ].map(({ icon, label, backgroundColor, color }) => (
+              <Badge
+                key={label}
+                display="inline-flex"
+                alignItems="center"
+                gap={2}
+                variant="subtle"
+                backgroundColor={backgroundColor}
+                color={color}
+                fontSize="12px"
+                textTransform="none"
+              >
+                {icon}
+                {label}
+              </Badge>
+            ))}
+          </Flex>
+        ),
+      },
+    ],
+    delay: 0.5,
+  },
+  {
     title: "Notes App",
     description:
       "a Note-app using LocalStorage API, so your data will never be removed unless you choose to remove it.",
@@ -323,7 +412,7 @@ export const projects: ProjectsType[] = [
         component: (
           <Link
             isExternal
-            href="https://danial-notes-app.vercel.app/"
+            href="https://danial-notes-app.vercel.app"
             target="_blank"
             style={{
               color: "white",
@@ -388,7 +477,7 @@ export const projects: ProjectsType[] = [
         ),
       },
     ],
-    delay: 0.5,
+    delay: 0.75,
   },
   {
     title: "The Film Inventory",
@@ -411,7 +500,7 @@ export const projects: ProjectsType[] = [
         component: (
           <Link
             isExternal
-            href="https://the-film-inventory.vercel.app/"
+            href="https://the-film-inventory.vercel.app"
             target="_blank"
             style={{
               color: "white",
@@ -421,7 +510,7 @@ export const projects: ProjectsType[] = [
               opacity: 0.8,
             }}
           >
-            https://the-film-inventory.com/
+            https://the-film-inventory.com
           </Link>
         ),
         divider: true,
@@ -478,7 +567,7 @@ export const projects: ProjectsType[] = [
         ),
       },
     ],
-    delay: 0.75,
+    delay: 1,
   },
   {
     title: "Danial's Links",
@@ -501,7 +590,7 @@ export const projects: ProjectsType[] = [
         component: (
           <Link
             isExternal
-            href="https://danial-links.vercel.app/"
+            href="https://danial-links.vercel.app"
             target="_blank"
             style={{
               color: "white",
@@ -563,7 +652,7 @@ export const projects: ProjectsType[] = [
         ),
       },
     ],
-    delay: 1,
+    delay: 1.25,
   },
   {
     title: "Margelo Software Agency",
@@ -586,7 +675,7 @@ export const projects: ProjectsType[] = [
         component: (
           <Link
             isExternal
-            href="https://software-agency-website.vercel.app/"
+            href="https://software-agency-website.vercel.app"
             target="_blank"
             style={{
               color: "white",
@@ -648,7 +737,7 @@ export const projects: ProjectsType[] = [
         ),
       },
     ],
-    delay: 1.25,
+    delay: 1.5,
   },
   {
     title: "Use-shared library",
@@ -725,7 +814,7 @@ export const projects: ProjectsType[] = [
         ),
       },
     ],
-    delay: 1.5,
+    delay: 1.75,
   },
   {
     title: "Emoji Todo",
@@ -805,7 +894,7 @@ export const projects: ProjectsType[] = [
         ),
       },
     ],
-    delay: 1.5,
+    delay: 2,
   },
 ];
 
@@ -900,7 +989,7 @@ export const workExperiences: WorkExperiencesType[] = [
     workplace_type: "On-site",
     location: "Tehran, Iran",
     divider: false,
-    delay: 1.5,
+    delay: 2.25,
   },
 ];
 

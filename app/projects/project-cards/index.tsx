@@ -19,7 +19,7 @@ const ProjectCards = () => {
       <Flex
         flexDirection="column"
         filter="auto"
-        blur={selectedID ? "5px" : "0px"}
+        blur={selectedID ? "5px" : ""}
         transitionProperty="all"
         transitionDuration=".2s"
         gap={6}
